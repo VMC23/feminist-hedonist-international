@@ -1,6 +1,6 @@
-/* Quote entrance — slides 19, 20, 26 */
+/* Quote entrance — slides 18, 19, 25 */
 (function () {
-  [20, 21, 26].forEach(n => {
+  [19, 20, 25].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);

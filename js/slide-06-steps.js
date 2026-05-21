@@ -1,6 +1,6 @@
-/* Slide 07 — Step-through stars (one at a time) */
+/* Slide 06 — Step-through stars (one at a time) */
 (function () {
-  const el = document.querySelector('[data-slide="7"]');
+  const el = document.querySelector('[data-slide="6"]');
   if (!el) return;
   const idx = deckEngine.getSlideIndex(el);
   const stars = el.querySelectorAll('.star-step');

@@ -1,6 +1,6 @@
-/* Slide 28 — Closing title */
+/* Slide 27 — Closing title */
 (function () {
-  const el = document.querySelector('[data-slide="28"]');
+  const el = document.querySelector('[data-slide="27"]');
   if (!el) return;
   const idx = deckEngine.getSlideIndex(el);
   deckEngine.register(idx, {

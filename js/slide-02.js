@@ -18,7 +18,7 @@
   const entranceRotations = [-35, 25, -45, 30, -20, 40, -30, 35, -25, 45, -40, 20];
 
   /* Slides with star-field layout */
-  const argSlideNums = [11, 14, 15, 25];
+  const argSlideNums = [10, 13, 14, 24];
   let patternIdx = 0;
 
   argSlideNums.forEach(n => {

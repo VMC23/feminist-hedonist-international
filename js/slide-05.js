@@ -1,7 +1,7 @@
 /* Stat slides — entrance animations */
 (function () {
-  /* All s-stat slides: 4, 5, 7, 11 */
-  [5, 6, 8, 12].forEach(n => {
+  /* All s-stat slides: 4, 5, 6, 10 */
+  [5, 6, 7, 11].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
