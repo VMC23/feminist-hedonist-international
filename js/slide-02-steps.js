@@ -1,10 +1,9 @@
 /* Slide 02 — Multi-phase step-through:
    Phase 1: Logos accumulate in random order (9 clicks)
-   Phase 2: Streikhaus + FSKZ logo (1 click)
-   Phase 3: Stars one-at-a-time (3 clicks)
-   Phase 4: 1991 text card (1 click)
-   Phase 5: 1991 images one-at-a-time (2 clicks)
-   Phase 6: 2019 images one-at-a-time (4 clicks) */
+   Phase 2: Stars one-at-a-time (3 clicks)
+   Phase 3: 1991 text card (1 click)
+   Phase 4: 1991 images one-at-a-time (2 clicks)
+   Phase 5: 2019 images one-at-a-time (4 clicks) */
 (function () {
   var el = document.querySelector('[data-slide="2"]');
   if (!el) return;
@@ -12,7 +11,6 @@
 
   var logos = el.querySelectorAll('.logo-item');
   var logoField = el.querySelector('.logo-field');
-  var streikhausEl = el.querySelector('.streikhaus-phase');
   var text1991El = el.querySelector('.phase-text-1991');
   var phase1991 = el.querySelector('.phase-1991');
   var phase2019 = el.querySelector('.phase-2019');
@@ -22,8 +20,7 @@
   var dots = el.querySelectorAll('.step-dot');
 
   var totalLogos = logos.length;
-  var streikhausStep = totalLogos;
-  var starStart = totalLogos + 1;
+  var starStart = totalLogos;
   var totalStars = stars.length;
   var text1991Step = starStart + totalStars;
   var img1991Start = text1991Step + 1;
@@ -48,7 +45,6 @@
   function hideAll() {
     gsap.set(logoField, { opacity: 1 });
     logos.forEach(function (l) { gsap.set(l, { opacity: 0, scale: .5 }); });
-    gsap.set(streikhausEl, { opacity: 0, pointerEvents: 'none' });
     gsap.set(text1991El, { opacity: 0, pointerEvents: 'none' });
     gsap.set(phase1991, { opacity: 0, pointerEvents: 'none' });
     gsap.set(phase2019, { opacity: 0, pointerEvents: 'none' });
@@ -60,7 +56,6 @@
 
   function hideOtherPhases(keep) {
     if (keep !== 'logos') gsap.to(logoField, { opacity: 0, duration: .2 });
-    if (keep !== 'streikhaus') gsap.set(streikhausEl, { opacity: 0, pointerEvents: 'none' });
     if (keep !== 'text1991') gsap.set(text1991El, { opacity: 0, pointerEvents: 'none' });
     if (keep !== '1991') { gsap.set(phase1991, { opacity: 0, pointerEvents: 'none' }); imgs1991.forEach(function (im) { gsap.set(im, { opacity: 0 }); }); }
     if (keep !== '2019') { gsap.set(phase2019, { opacity: 0, pointerEvents: 'none' }); imgs2019.forEach(function (im) { gsap.set(im, { opacity: 0 }); }); }
@@ -82,12 +77,6 @@
         gsap.set(l, { opacity: 0, scale: .5 });
       }
     });
-  }
-
-  function showStreikhaus() {
-    hideOtherPhases('streikhaus');
-    gsap.set(streikhausEl, { pointerEvents: 'auto' });
-    gsap.fromTo(streikhausEl, { opacity: 0, scale: .9 }, { opacity: 1, scale: 1, duration: .6, ease: 'back.out(1.5)' });
   }
 
   function showStar(n) {
@@ -128,8 +117,6 @@
   function renderStep(s) {
     if (s >= 0 && s < totalLogos) {
       showLogos(s);
-    } else if (s === streikhausStep) {
-      showStreikhaus();
     } else if (s >= starStart && s < text1991Step) {
       showStar(s - starStart);
     } else if (s === text1991Step) {
