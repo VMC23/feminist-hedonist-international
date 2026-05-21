@@ -711,6 +711,14 @@ html, body {
     </div>
     <div style="position:absolute;bottom:3vh;right:3vw;font-family:var(--mono);font-size:1.4vh;color:var(--wissen-cream);opacity:.4;text-align:right;line-height:1.6;z-index:2">Frauenstimmrecht: 16. März 1971<br>Innerrhoden: 29. April 1990</div>
   </div>
+  <!-- Streikhaus phase: between 1991 and 2019 -->
+  <div class="streikhaus-phase" style="position:absolute;inset:0;z-index:7;display:flex;align-items:center;justify-content:center;gap:5vw;opacity:0;pointer-events:none">
+    <img src="bilder/wer wir sind feministisches streikhaus.png" style="height:75vh;width:auto;filter:drop-shadow(4px 4px 0 rgba(18,10,31,.15))">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:3vh">
+      <img src="grafiken/cropped-Logo_FSKZ_WEB_LILA.png" style="width:30vh;height:auto;filter:drop-shadow(3px 3px 0 rgba(18,10,31,.1))">
+      <div style="font-family:var(--display);font-size:4vh;color:var(--streik-lila);text-align:center;line-height:1.2">Feministisches<br>Streikkollektiv<br>Zürich</div>
+    </div>
+  </div>
   <!-- 2019 phase: 3 images step-through -->
   <div class="phase-2019" style="position:absolute;inset:0;z-index:7;background:var(--tinten-schwarz);opacity:0;pointer-events:none">
     <div style="position:absolute;top:2vh;left:50%;transform:translateX(-50%);font-family:var(--display);font-size:5vh;color:var(--hot-pink);z-index:2">14. Juni 2019</div>
@@ -851,7 +859,7 @@ html, body {
 </div>
 <!-- Slide 10: DEFINITION — Was ist Care-Arbeit? -->
 <div class="slide s-definition" data-slide="10">
-  <div class="def-title">Was ist <em>Care-Arbeit?</em></div>
+  <div class="def-title">Wie verstehen wir <em>Care-Arbeit?</em></div>
   <div class="def-text">Sorgearbeit für die grundlegenden menschlichen Bedürfnisse — mit dem Ziel: körperliches, intellektuelles und emotionales Wohl.</div>
   <div class="def-sub">Bezahlt und unbezahlt. Grundlage für das Leben und Funktionieren unserer Gesellschaft. Die Ressource Mensch lässt sich nicht outsourcen — aber migrantische Personen und FLINTA* werden dafür schlecht bezahlt.</div>
   <img src="grafiken/care2027_item_baby2.png" style="position:absolute;top:6vh;right:5vw;width:39vh;transform:rotate(5deg);pointer-events:none;z-index:4" alt="">
@@ -1150,7 +1158,7 @@ html, body {
   </div>
   <!-- Die-In Stütze -->
   <div style="position:absolute;right:4vw;top:15vh;width:38vw;text-align:center;z-index:4">
-    <div style="font-family:var(--mono);font-size:3vh;letter-spacing:.08em;color:var(--hot-pink);margin-top:3vh;transform:rotate(-3deg)">18:00 — LIEGEN BLEIBEN</div>
+    <div style="font-family:var(--mono);font-size:3vh;letter-spacing:.08em;color:var(--hot-pink);margin-top:3vh;transform:rotate(-3deg)">18:00 auf die Strasse liegen</div>
     <img src="grafiken/care2027_item_maske2.png" style="width:18vh;margin-top:2vh;transform:rotate(12deg);opacity:.8" alt="">
   </div>
   <div class="qr-area">
@@ -1285,10 +1293,11 @@ html, body {
 })();
 /* Slide 02 — Multi-phase step-through:
    Phase 1: Logos accumulate in random order (9 clicks)
-   Phase 2: Stars one-at-a-time (3 clicks)
-   Phase 3: 1991 text card (1 click)
-   Phase 4: 1991 images one-at-a-time (2 clicks)
-   Phase 5: 2019 images one-at-a-time (4 clicks) */
+   Phase 2: Streikhaus + FSKZ logo (1 click)
+   Phase 3: Stars one-at-a-time (3 clicks)
+   Phase 4: 1991 text card (1 click)
+   Phase 5: 1991 images one-at-a-time (2 clicks)
+   Phase 6: 2019 images one-at-a-time (4 clicks) */
 (function () {
   var el = document.querySelector('[data-slide="2"]');
   if (!el) return;
@@ -1296,6 +1305,7 @@ html, body {
 
   var logos = el.querySelectorAll('.logo-item');
   var logoField = el.querySelector('.logo-field');
+  var streikhausEl = el.querySelector('.streikhaus-phase');
   var text1991El = el.querySelector('.phase-text-1991');
   var phase1991 = el.querySelector('.phase-1991');
   var phase2019 = el.querySelector('.phase-2019');
@@ -1305,7 +1315,8 @@ html, body {
   var dots = el.querySelectorAll('.step-dot');
 
   var totalLogos = logos.length;
-  var starStart = totalLogos;
+  var streikhausStep = totalLogos;
+  var starStart = streikhausStep + 1;
   var totalStars = stars.length;
   var text1991Step = starStart + totalStars;
   var img1991Start = text1991Step + 1;
@@ -1330,6 +1341,7 @@ html, body {
   function hideAll() {
     gsap.set(logoField, { opacity: 1 });
     logos.forEach(function (l) { gsap.set(l, { opacity: 0, scale: .5 }); });
+    gsap.set(streikhausEl, { opacity: 0, pointerEvents: 'none' });
     gsap.set(text1991El, { opacity: 0, pointerEvents: 'none' });
     gsap.set(phase1991, { opacity: 0, pointerEvents: 'none' });
     gsap.set(phase2019, { opacity: 0, pointerEvents: 'none' });
@@ -1341,6 +1353,7 @@ html, body {
 
   function hideOtherPhases(keep) {
     if (keep !== 'logos') gsap.to(logoField, { opacity: 0, duration: .2 });
+    if (keep !== 'streikhaus') gsap.set(streikhausEl, { opacity: 0, pointerEvents: 'none' });
     if (keep !== 'text1991') gsap.set(text1991El, { opacity: 0, pointerEvents: 'none' });
     if (keep !== '1991') { gsap.set(phase1991, { opacity: 0, pointerEvents: 'none' }); imgs1991.forEach(function (im) { gsap.set(im, { opacity: 0 }); }); }
     if (keep !== '2019') { gsap.set(phase2019, { opacity: 0, pointerEvents: 'none' }); imgs2019.forEach(function (im) { gsap.set(im, { opacity: 0 }); }); }
@@ -1362,6 +1375,12 @@ html, body {
         gsap.set(l, { opacity: 0, scale: .5 });
       }
     });
+  }
+
+  function showStreikhaus() {
+    hideOtherPhases('streikhaus');
+    gsap.set(streikhausEl, { pointerEvents: 'auto' });
+    gsap.fromTo(streikhausEl, { opacity: 0, scale: .9 }, { opacity: 1, scale: 1, duration: .6, ease: 'back.out(1.5)' });
   }
 
   function showStar(n) {
@@ -1402,6 +1421,8 @@ html, body {
   function renderStep(s) {
     if (s >= 0 && s < totalLogos) {
       showLogos(s);
+    } else if (s === streikhausStep) {
+      showStreikhaus();
     } else if (s >= starStart && s < text1991Step) {
       showStar(s - starStart);
     } else if (s === text1991Step) {
