@@ -1,0 +1,32 @@
+node_modules/
+slide-images/
+~$*
+
+# Large binary assets (too big for GitHub)
+backup/
+quellen/
+.DS_Store
+.claude/
+
+# Unused images (not referenced in presentation)
+bilder/Feministische Streikkollektive icons/
+bilder/streik-2019/lausanne-02.jpg
+bilder/streik-2019/basel-01.jpg
+bilder/streik-2019/basel-02.jpg
+bilder/streik-2019/basel-03.jpg
+bilder/streik-2019/geneve-plainpalais.jpg
+bilder/streik-2019/geneve-pont-02.jpg
+bilder/streik-2019/geneve-marche.jpg
+bilder/streik-2019/zuerich-01.jpg
+bilder/streik-2019/zuerich-02.jpg
+bilder/streik-2019/woz-frauenstreik-1910.jpg
+bilder/*.webp
+bilder/storn_ohne_ramen-694x800.png
+bilder/streik 14. juni logo.png
+bilder/es wird gross streik 2027.jpeg
+bilder/kind erwachsene care.png
+bilder/Greve_Femmes_Bienne_14_Juin_2019_19.jpg
+bilder/streikkollektive-logos/14juni-national.png
+bilder/streikkollektive-logos/bern-favicon.png
+grafiken/grosser-stern-*.png
+grafiken/streik-14.06-*.png

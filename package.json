@@ -1,0 +1,15 @@
+{
+  "name": "vortrag_hedo",
+  "version": "1.0.0",
+  "description": "Single-file HTML presentation for the joint webinar \"Lokale KI fur unabhangige & souverane Unternehmen\" (19.05.2026, 10:00-11:00 via Zoom).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^24.43.0"
+  }
+}
