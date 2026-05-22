@@ -1,6 +1,6 @@
-/* Slide 23 — 4 Ansätze stars step-through (one at a time, big) */
+/* Slide 21 — 4 Ansätze stars step-through (one at a time, big) */
 (function () {
-  var el = document.querySelector('[data-slide="23"]');
+  var el = document.querySelector('[data-slide="20"]');
   if (!el) return;
   var idx = deckEngine.getSlideIndex(el);
   var stars = el.querySelectorAll('.star-step');

@@ -1,6 +1,6 @@
-/* Workshop/discussion slides — 16, 24 */
+/* Workshop/discussion slides — 14, 22 */
 (function () {
-  [17, 25].forEach(n => {
+  [14, 22].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);

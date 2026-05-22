@@ -1,6 +1,6 @@
-/* Column-based argument slides — 20 (CH vs DE comparison) */
+/* Column-based argument slides — 18 (CH vs DE comparison) */
 (function () {
-  [21].forEach(n => {
+  [18].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);

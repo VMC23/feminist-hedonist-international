@@ -1,6 +1,6 @@
 /* Slide 01 — Title clip reveal + sticker pop */
 (function () {
-  const el = document.querySelector('[data-slide="1"]');
+  const el = document.querySelector('[data-slide="0"]');
   const idx = deckEngine.getSlideIndex(el);
 
   deckEngine.register(idx, {

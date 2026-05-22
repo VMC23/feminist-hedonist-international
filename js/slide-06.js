@@ -1,15 +1,21 @@
-/* Big statement text reveal — slide 21 */
+/* CTA entrance — slides 5, 13 */
 (function () {
-  [21].forEach(n => {
+  [5, 13].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
     deckEngine.register(idx, {
       enter() {
-        const txt = el.querySelector('.big-text');
-        if (txt) gsap.fromTo(txt, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 1, ease: 'power3.out' });
+        const title = el.querySelector('.cta-title');
+        if (title) gsap.fromTo(title, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: .8, ease: 'power3.out' });
+        const sub = el.querySelector('.cta-sub');
+        if (sub) gsap.fromTo(sub, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: .4, delay: .5 });
+        const detail = el.querySelector('.cta-detail');
+        if (detail) gsap.fromTo(detail, { opacity: 0 }, { opacity: 1, duration: .4, delay: .7 });
         const sticker = el.querySelector('.sticker-deco');
-        if (sticker) gsap.fromTo(sticker, { scale: 0 }, { scale: 1, duration: .5, delay: .6, ease: 'back.out(2)' });
+        if (sticker) gsap.fromTo(sticker, { scale: 0, rotation: -15 }, { scale: 1, rotation: 12, duration: .5, delay: .4, ease: 'back.out(2)' });
+        const contacts = el.querySelectorAll('.contact-item');
+        if (contacts.length) gsap.fromTo(contacts, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .4, stagger: .1, delay: .5 });
       }
     });
   });

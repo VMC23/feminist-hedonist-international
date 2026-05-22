@@ -1,5 +1,5 @@
 <!-- Slide 02: ÜBERSICHT — Wer sind wir (logos + step-through stars) -->
-<div class="slide s-three" data-slide="2">
+<div class="slide s-three" data-slide="1">
   <div class="head">Wer sind wir — <em>und warum Care-Streik?</em></div>
   <!-- Logo intro phase: accumulating logos per click -->
   <div class="logo-field" style="position:absolute;inset:0;z-index:5">
@@ -40,6 +40,11 @@
       <div style="font-family:var(--mono);font-size:1.6vh;margin-top:.6vh;color:var(--streik-lila);letter-spacing:.05em">Ticino</div>
     </div>
   </div>
+  <!-- Streikhaus photo phase -->
+  <div class="streikhaus-photo-phase" style="position:absolute;inset:0;z-index:7;background:var(--tinten-schwarz);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none">
+    <div style="font-family:var(--display);font-size:4.5vh;color:var(--kollektiv-gelb);margin-bottom:2vh">Feministisches Streikhaus Zürich</div>
+    <img src="bilder/feministisches streikhaus zurich bild.png" style="max-height:74vh;max-width:92vw;object-fit:contain;box-shadow:4px 4px 0 rgba(255,255,255,.1)">
+  </div>
   <!-- 1991 phase: 2 images step-through -->
   <div class="phase-1991" style="position:absolute;inset:0;z-index:7;background:var(--tinten-schwarz);opacity:0;pointer-events:none">
     <div style="position:absolute;top:2vh;left:50%;transform:translateX(-50%);font-family:var(--display);font-size:5vh;color:var(--kollektiv-gelb);z-index:2">14. Juni 1991</div>
@@ -53,7 +58,7 @@
     </div>
     <div style="position:absolute;bottom:3vh;right:3vw;font-family:var(--mono);font-size:1.4vh;color:var(--wissen-cream);opacity:.4;text-align:right;line-height:1.6;z-index:2">Frauenstimmrecht: 16. März 1971<br>Innerrhoden: 29. April 1990</div>
   </div>
-  <!-- Streikhaus phase: between 1991 and 2019 -->
+  <!-- Streikhaus illustration phase: right after logos -->
   <div class="streikhaus-phase" style="position:absolute;inset:0;z-index:7;display:flex;align-items:center;justify-content:center;gap:5vw;opacity:0;pointer-events:none">
     <img src="bilder/wer wir sind feministisches streikhaus.png" style="height:75vh;width:auto;filter:drop-shadow(4px 4px 0 rgba(18,10,31,.15))">
     <div style="display:flex;flex-direction:column;align-items:center;gap:3vh">
@@ -88,25 +93,19 @@
     <div class="star-card star-step" data-step="0" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
       <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L122,62 L185,22 L142,78 L195,100 L142,122 L185,178 L122,138 L100,195 L78,138 L15,178 L58,122 L5,100 L58,78 L15,22 L78,62 Z" fill="#6B2FB5" stroke="#120A1F" stroke-width="3"/></svg>
       <div class="star-content on-dark">
-        <span class="n">01</span>
-        <h3>Geschichte &amp; Care-Arbeit</h3>
-        <p>1991 · 2019 · Wer sind wir? Definition Care</p>
+        <h3>Geschichte &amp; Definition Care</h3>
       </div>
     </div>
     <div class="star-card star-step" data-step="1" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,10 L140,52 L192,38 L155,100 L192,162 L140,148 L100,190 L60,148 L8,162 L45,100 L8,38 L60,52 Z" fill="#FF3D7F" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-dark">
-        <span class="n">02</span>
+      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,10 L140,52 L192,38 L155,100 L192,162 L140,148 L100,190 L60,148 L8,162 L45,100 L8,38 L60,52 Z" fill="#FFD93D" stroke="#120A1F" stroke-width="3"/></svg>
+      <div class="star-content on-light">
         <h3>Forderungen &amp; Streik</h3>
-        <p>Streikrecht, Feministischer Streik, Forderungen</p>
       </div>
     </div>
     <div class="star-card star-step" data-step="2" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L114,55 L155,12 L130,58 L190,42 L146,80 L198,100 L146,120 L190,158 L130,142 L155,188 L114,145 L100,195 L86,145 L45,188 L70,142 L10,158 L54,120 L2,100 L54,80 L10,42 L70,58 L45,12 L86,55 Z" fill="#FFD93D" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-light">
-        <span class="n">03</span>
+      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L114,55 L155,12 L130,58 L190,42 L146,80 L198,100 L146,120 L190,158 L130,142 L155,188 L114,145 L100,195 L86,145 L45,188 L70,142 L10,158 L54,120 L2,100 L54,80 L10,42 L70,58 L45,12 L86,55 Z" fill="#FF3D7F" stroke="#120A1F" stroke-width="3"/></svg>
+      <div class="star-content on-dark">
         <h3>Ansätze &amp; Diskussion</h3>
-        <p>4 Ansätze zum Care-Streik 2027, Eure Ideen</p>
       </div>
     </div>
   </div>
@@ -115,5 +114,5 @@
     <div class="step-dot" data-step="1" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
     <div class="step-dot" data-step="2" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
   </div>
-  <span class="slide-num">02 / 27</span>
+  <span class="slide-num">02 / 25</span>
 </div>

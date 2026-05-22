@@ -1,6 +1,6 @@
-/* Slide 22 — Step-through demands (one at a time, accumulating) */
+/* Slide 20 — Step-through demands (one at a time, accumulating) */
 (function () {
-  const el = document.querySelector('[data-slide="22"]');
+  const el = document.querySelector('[data-slide="19"]');
   if (!el) return;
   const idx = deckEngine.getSlideIndex(el);
   const items = el.querySelectorAll('.demand-step');

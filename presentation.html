@@ -639,19 +639,19 @@ html, body {
 <div id="deck">
 
 <!-- Slide 01: TITEL — Care-Streik 2027 -->
-<div class="slide s-title" data-slide="1">
+<div class="slide s-title" data-slide="0">
   <div class="kicker">Feministisches Streikkollektiv Zürich</div>
   <div class="big">Care-Streik 2027<br>Feministisch Streiken —<br><em>aber wie?</em></div>
   <div class="foot">
     <span>feministischerstreikzuerich.ch</span>
-    <span>01 / 27</span>
+    <span>01 / 25</span>
   </div>
   <div class="sticker-deco" style="top:2vh;right:10vw;transform:rotate(6deg)">
     <img src="bilder/care-stern-TITLE.png" style="width:55vh;height:55vh;object-fit:contain;filter:drop-shadow(4px 4px 0 rgba(18,10,31,.25))" alt="Care-Stern">
   </div>
 </div>
 <!-- Slide 02: ÜBERSICHT — Wer sind wir (logos + step-through stars) -->
-<div class="slide s-three" data-slide="2">
+<div class="slide s-three" data-slide="1">
   <div class="head">Wer sind wir — <em>und warum Care-Streik?</em></div>
   <!-- Logo intro phase: accumulating logos per click -->
   <div class="logo-field" style="position:absolute;inset:0;z-index:5">
@@ -692,6 +692,11 @@ html, body {
       <div style="font-family:var(--mono);font-size:1.6vh;margin-top:.6vh;color:var(--streik-lila);letter-spacing:.05em">Ticino</div>
     </div>
   </div>
+  <!-- Streikhaus photo phase -->
+  <div class="streikhaus-photo-phase" style="position:absolute;inset:0;z-index:7;background:var(--tinten-schwarz);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none">
+    <div style="font-family:var(--display);font-size:4.5vh;color:var(--kollektiv-gelb);margin-bottom:2vh">Feministisches Streikhaus Zürich</div>
+    <img src="bilder/feministisches streikhaus zurich bild.png" style="max-height:74vh;max-width:92vw;object-fit:contain;box-shadow:4px 4px 0 rgba(255,255,255,.1)">
+  </div>
   <!-- 1991 phase: 2 images step-through -->
   <div class="phase-1991" style="position:absolute;inset:0;z-index:7;background:var(--tinten-schwarz);opacity:0;pointer-events:none">
     <div style="position:absolute;top:2vh;left:50%;transform:translateX(-50%);font-family:var(--display);font-size:5vh;color:var(--kollektiv-gelb);z-index:2">14. Juni 1991</div>
@@ -705,7 +710,7 @@ html, body {
     </div>
     <div style="position:absolute;bottom:3vh;right:3vw;font-family:var(--mono);font-size:1.4vh;color:var(--wissen-cream);opacity:.4;text-align:right;line-height:1.6;z-index:2">Frauenstimmrecht: 16. März 1971<br>Innerrhoden: 29. April 1990</div>
   </div>
-  <!-- Streikhaus phase: between 1991 and 2019 -->
+  <!-- Streikhaus illustration phase: right after logos -->
   <div class="streikhaus-phase" style="position:absolute;inset:0;z-index:7;display:flex;align-items:center;justify-content:center;gap:5vw;opacity:0;pointer-events:none">
     <img src="bilder/wer wir sind feministisches streikhaus.png" style="height:75vh;width:auto;filter:drop-shadow(4px 4px 0 rgba(18,10,31,.15))">
     <div style="display:flex;flex-direction:column;align-items:center;gap:3vh">
@@ -740,25 +745,19 @@ html, body {
     <div class="star-card star-step" data-step="0" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
       <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L122,62 L185,22 L142,78 L195,100 L142,122 L185,178 L122,138 L100,195 L78,138 L15,178 L58,122 L5,100 L58,78 L15,22 L78,62 Z" fill="#6B2FB5" stroke="#120A1F" stroke-width="3"/></svg>
       <div class="star-content on-dark">
-        <span class="n">01</span>
-        <h3>Geschichte &amp; Care-Arbeit</h3>
-        <p>1991 · 2019 · Wer sind wir? Definition Care</p>
+        <h3>Geschichte &amp; Definition Care</h3>
       </div>
     </div>
     <div class="star-card star-step" data-step="1" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,10 L140,52 L192,38 L155,100 L192,162 L140,148 L100,190 L60,148 L8,162 L45,100 L8,38 L60,52 Z" fill="#FF3D7F" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-dark">
-        <span class="n">02</span>
+      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,10 L140,52 L192,38 L155,100 L192,162 L140,148 L100,190 L60,148 L8,162 L45,100 L8,38 L60,52 Z" fill="#FFD93D" stroke="#120A1F" stroke-width="3"/></svg>
+      <div class="star-content on-light">
         <h3>Forderungen &amp; Streik</h3>
-        <p>Streikrecht, Feministischer Streik, Forderungen</p>
       </div>
     </div>
     <div class="star-card star-step" data-step="2" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L114,55 L155,12 L130,58 L190,42 L146,80 L198,100 L146,120 L190,158 L130,142 L155,188 L114,145 L100,195 L86,145 L45,188 L70,142 L10,158 L54,120 L2,100 L54,80 L10,42 L70,58 L45,12 L86,55 Z" fill="#FFD93D" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-light">
-        <span class="n">03</span>
+      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L114,55 L155,12 L130,58 L190,42 L146,80 L198,100 L146,120 L190,158 L130,142 L155,188 L114,145 L100,195 L86,145 L45,188 L70,142 L10,158 L54,120 L2,100 L54,80 L10,42 L70,58 L45,12 L86,55 Z" fill="#FF3D7F" stroke="#120A1F" stroke-width="3"/></svg>
+      <div class="star-content on-dark">
         <h3>Ansätze &amp; Diskussion</h3>
-        <p>4 Ansätze zum Care-Streik 2027, Eure Ideen</p>
       </div>
     </div>
   </div>
@@ -767,94 +766,46 @@ html, body {
     <div class="step-dot" data-step="1" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
     <div class="step-dot" data-step="2" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
   </div>
-  <span class="slide-num">02 / 27</span>
-</div>
-<!-- Slide 04: Feministisches Streikhaus Zürich -->
-<div class="slide s-stat" data-slide="3" style="background:var(--tinten-schwarz);display:flex;flex-direction:column;align-items:center;justify-content:center">
-  <div style="font-family:var(--display);font-size:4.5vh;color:var(--kollektiv-gelb);margin-bottom:2vh">Feministisches Streikhaus Zürich</div>
-  <img src="bilder/feministisches streikhaus zurich bild.png" style="max-height:74vh;max-width:92vw;object-fit:contain;box-shadow:4px 4px 0 rgba(255,255,255,.1)">
-  <span class="slide-num" style="color:var(--wissen-cream)">03 / 27</span>
+  <span class="slide-num">02 / 25</span>
 </div>
 <!-- Slide 03: STATEMENT — Entpolitisierung 14. Juni -->
-<div class="slide s-stat s-stat-statement" data-slide="4" style="background:var(--wissen-cream)">
+<div class="slide s-stat s-stat-statement" data-slide="2" style="background:var(--wissen-cream)">
   <div class="big-text" style="font-size:6.5vh;max-width:48vw">Der 14. Juni hat eine<br><em>Entpolitisierung</em> erfahren.<br><br>Symbolische Demo reicht nicht.<br>Fokus: <em>effektive Arbeitsniederlegung</em> —<br>mit Gewerkschaften und darüber hinaus.</div>
   <img src="bilder/streik 14.juni.png" style="position:absolute;right:4vw;top:50%;transform:translateY(-50%);height:45vh;width:auto;object-fit:contain;pointer-events:none;z-index:4" alt="">
-  <span class="slide-num">04 / 27</span>
+  <span class="slide-num">03 / 25</span>
 </div>
-<!-- Slide 05: STATISTIK — 1991 -->
-<div class="slide s-stat" data-slide="5">
-  <div class="num">1991</div>
-  <div class="desc">500'000 Frauen* streiken. „Wenn Frau will, steht alles still."</div>
-  <p class="footnote footnote-bottom">Errungenschaften: Gleichstellungsgesetz · Mutterschaftsversicherung · AHV-Splitting · Fristenlösung · Massnahmen gegen häusliche Gewalt</p>
-  <img src="grafiken/care2027_item_mega.png" style="position:absolute;top:6vh;right:6vw;width:42vh;opacity:.85;transform:rotate(12deg);pointer-events:none;z-index:4" alt="">
-  <span class="slide-num">05 / 27</span>
-</div>
-<!-- Slide 06: ARGUMENT — Teilerfolge & Backlash (step-through) -->
-<div class="slide s-three" data-slide="6">
-  <div class="head">Teilerfolge.</div>
-  <div class="star-field">
-    <div class="star-card star-step" data-step="0" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M105,8 L132,52 L188,28 L150,80 L198,118 L138,128 L162,188 L100,150 L38,188 L62,128 L2,118 L50,80 L12,28 L68,52 Z" fill="#FF3D7F" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-dark">
-        <span class="n">Erfolge</span>
-        <h3>Sexualstrafrecht · Vaterschaftsurlaub · Stalking</h3>
-      </div>
-    </div>
-    <div class="star-card star-step" data-step="1" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,5 L128,68 L195,52 L148,108 L178,185 L100,142 L22,185 L52,108 L5,52 L72,68 Z" fill="#FF7A1A" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-dark">
-        <span class="n">Offen</span>
-        <h3>Nicht umgesetzt</h3>
-      </div>
-    </div>
-    <!-- Floating examples around star 1 -->
-    <div class="float-tag" data-step="1" style="position:absolute;left:6vw;top:4vh;opacity:0;font-family:var(--mono);font-size:2.2vh;letter-spacing:.06em;color:var(--hot-pink);transform:rotate(-4deg)">Lohngleichheit: 18% Gap</div>
-    <div class="float-tag" data-step="1" style="position:absolute;right:5vw;top:8vh;opacity:0;font-family:var(--mono);font-size:2.2vh;letter-spacing:.06em;color:var(--streik-lila);transform:rotate(3deg)">Rentenalter erhöht statt gesenkt</div>
-    <div class="float-tag" data-step="1" style="position:absolute;left:4vw;bottom:16vh;opacity:0;font-family:var(--mono);font-size:2.2vh;letter-spacing:.06em;color:var(--haessig-orange);transform:rotate(-2deg)">Vaterschaftsurlaub: nur 2 Wochen</div>
-    <div class="float-tag" data-step="1" style="position:absolute;right:4vw;bottom:20vh;opacity:0;font-family:var(--mono);font-size:2.2vh;letter-spacing:.06em;color:var(--hot-pink);transform:rotate(5deg)">Kein Mindestlohn</div>
-    <div class="float-tag" data-step="1" style="position:absolute;left:8vw;top:42vh;opacity:0;font-family:var(--mono);font-size:2.2vh;letter-spacing:.06em;color:var(--streik-lila);transform:rotate(-6deg)">Femizide</div>
-    <div class="star-card star-step" data-step="2" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
-      <svg class="star-bg" viewBox="0 0 200 200"><path d="M100,8 L118,48 L162,15 L140,58 L192,55 L152,88 L198,115 L148,125 L175,172 L118,142 L100,195 L82,142 L25,172 L52,125 L2,115 L48,88 L8,55 L60,58 L38,15 L82,48 Z" fill="#6B2FB5" stroke="#120A1F" stroke-width="3"/></svg>
-      <div class="star-content on-dark">
-        <span class="n">Backlash</span>
-        <h3>Angriffe auf erkämpfte Rechte</h3>
-        <p>Rechtsruck · Aufrüstung · Abbau Sozialleistungen</p>
-      </div>
-    </div>
-  </div>
-  <div class="step-dots" style="position:absolute;bottom:6vh;left:50%;transform:translateX(-50%);display:flex;gap:1.2vh;z-index:10">
-    <div class="step-dot" data-step="0" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
-    <div class="step-dot" data-step="1" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
-    <div class="step-dot" data-step="2" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
-  </div>
-  <span class="slide-num">06 / 27</span>
+<!-- Slide 07: STATEMENT — Streiken lohnt sich! -->
+<div class="slide s-stat s-stat-statement" data-slide="3" style="background:var(--wissen-cream)">
+  <div class="big-text" style="font-size:8vh;max-width:50vw"><em>Streiken lohnt sich!</em></div>
+  <img src="grafiken/rote-faust.png" style="position:absolute;right:6vw;top:50%;transform:translateY(-50%);height:50vh;width:auto;object-fit:contain;pointer-events:none;z-index:4" alt="">
+  <span class="slide-num">04 / 25</span>
 </div>
 <!-- Slide 07: STATISTIK — Waadt 2025 -->
-<div class="slide s-stat" data-slide="7">
+<div class="slide s-stat" data-slide="4">
   <div class="num">Waadt<sup>2025</sup></div>
   <div class="desc">20'000+ streiken im Herbst 2025. 7 Streiktage. Pflege, Bildung, öffentlicher Dienst. Kaum Medienecho in der Deutschschweiz.</div>
   <p class="footnote footnote-bottom">Quellen: <a href="https://www.srf.ch/news/schweiz/streik-in-der-waadt" style="color:var(--streik-lila)">SRF</a> · <a href="https://www.workzeitung.ch/2025/09/waadt-streikt/" style="color:var(--streik-lila)">Work</a> · <a href="https://zuerich.vpod.ch/kalender/2026/von-der-waadt-bis-zum-care-streik-kaempfe-verbinden/" style="color:var(--streik-lila)">VPOD Zürich</a></p>
   <img src="grafiken/Sterne_-12.png" style="position:absolute;top:4vh;right:5vw;width:70vh;pointer-events:none;z-index:4" alt="">
-  <span class="slide-num">07 / 27</span>
+  <span class="slide-num">05 / 25</span>
 </div>
 <!-- Slide 08: TRANSITION — Care-Streik 2027 WARUM? -->
-<div class="slide s-cta" data-slide="8">
+<div class="slide s-cta" data-slide="5">
   <div style="font-family:var(--mono);font-size:1.4vh;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1vh">Block 1</div>
   <div class="cta-title">CARE-STREIK<br>2027 —<br><em style="font-family:var(--serif);font-style:italic;font-weight:900;color:var(--streik-lila);font-variation-settings:'SOFT' 80">warum?</em></div>
   <div class="cta-sub">Wie definiert das feministische Streikkollektiv Care-Arbeit?</div>
   <img src="grafiken/care2027_item_buegeleisen.png" style="position:absolute;bottom:8vh;right:6vw;width:45vh;transform:rotate(-8deg);pointer-events:none;z-index:4" alt="">
-  <span class="slide-num" style="color:var(--tinten-schwarz)">08 / 27</span>
+  <span class="slide-num" style="color:var(--tinten-schwarz)">06 / 25</span>
 </div>
 <!-- Slide 09: DEFINITION — Was ist Care-Arbeit? -->
-<div class="slide s-definition" data-slide="9">
+<div class="slide s-definition" data-slide="6">
   <div class="def-title">Wie verstehen wir <em>Care-Arbeit?</em></div>
   <div class="def-text">Sorgearbeit für die grundlegenden menschlichen Bedürfnisse — mit dem Ziel: körperliches, intellektuelles und emotionales Wohl.</div>
   <div class="def-sub">Bezahlt und unbezahlt. Grundlage für das Leben und Funktionieren unserer Gesellschaft. Die Ressource Mensch lässt sich nicht outsourcen — aber migrantische Personen und FLINTA* werden dafür schlecht bezahlt.</div>
   <img src="grafiken/care2027_item_baby2.png" style="position:absolute;top:6vh;right:5vw;width:39vh;transform:rotate(5deg);pointer-events:none;z-index:4" alt="">
-  <span class="slide-num">09 / 27</span>
+  <span class="slide-num">07 / 25</span>
 </div>
 <!-- Slide 10: ARGUMENT — Care-Arbeit beinhaltet -->
-<div class="slide s-three" data-slide="10">
+<div class="slide s-three" data-slide="7">
   <div class="head">Care-Arbeit <em>beinhaltet.</em></div>
   <div class="star-field">
     <div class="star-card" style="left:0;top:0;width:52vh;height:52vh">
@@ -882,23 +833,23 @@ html, body {
       </div>
     </div>
   </div>
-  <span class="slide-num">10 / 27</span>
+  <span class="slide-num">08 / 25</span>
 </div>
 <!-- Slide 11: STATISTIK — Vier-Sektoren-Modell -->
-<div class="slide s-stat" data-slide="11">
+<div class="slide s-stat" data-slide="8">
   <div class="num">69 %</div>
   <div class="desc">der gesamten gesellschaftlichen Arbeitszeit in Deutschland entfällt auf Care-Arbeit — bezahlt und unbezahlt zusammen. In der Schweiz: 74 %.</div>
   <p class="footnote footnote-bottom">Vier-Sektoren-Modell nach Mascha Madörin · <a href="https://economiefeministe.ch/themen/sorge-und-versorgungswirtschaft/" style="color:var(--streik-lila)">economiefeministe.ch</a> · Sorge- und Versorgungswirtschaft = der grösste Wirtschaftssektor. 85 % der Lebensarbeitszeit von Frauen.</p>
   <img src="grafiken/care2027_item_waesche.png" style="position:absolute;top:6vh;right:5vw;width:39vh;transform:rotate(-6deg);pointer-events:none;z-index:4" alt="">
-  <span class="slide-num">11 / 27</span>
+  <span class="slide-num">09 / 25</span>
 </div>
 <!-- Slide 12: Vier-Sektoren-Modell (Grafik) -->
-<div class="slide s-stat" data-slide="12" style="background:var(--wissen-cream);display:flex;align-items:center;justify-content:center">
+<div class="slide s-stat" data-slide="9" style="background:var(--wissen-cream);display:flex;align-items:center;justify-content:center">
   <img src="bilder/vier-sektoren-modell.png" style="max-width:98vw;max-height:95vh;object-fit:contain;box-shadow:4px 4px 0 rgba(18,10,31,.2)" alt="Vier-Sektoren-Modell nach Mascha Madörin">
-  <span class="slide-num">12 / 27</span>
+  <span class="slide-num">10 / 25</span>
 </div>
 <!-- Slide 13: ARGUMENT — Krise der Care-Arbeit (stars) -->
-<div class="slide s-three" data-slide="13">
+<div class="slide s-three" data-slide="10">
   <div class="head">Die Krise <em>spitzt sich zu.</em></div>
   <div style="position:absolute;top:2vh;right:4vw;max-width:42vw;font-family:var(--mono);font-size:2.4vh;letter-spacing:.04em;color:var(--hot-pink);text-align:right;z-index:10">Das System bricht zusammen, wenn Care-Arbeit nicht mehr unbezahlt getätigt wird.</div>
   <div class="star-field">
@@ -928,29 +879,29 @@ html, body {
     </div>
   </div>
   <img src="bilder/because we care! gegen krieg und patriarchat.png" style="position:absolute;bottom:2vh;left:3vw;width:30vh;pointer-events:none;z-index:1;opacity:.3" alt="">
-  <span class="slide-num">13 / 27</span>
+  <span class="slide-num">11 / 25</span>
 </div>
 <!-- Slide 14: ZITAT — Winker, Care Revolution -->
-<div class="slide s-quote" data-slide="14" style="background:var(--wissen-cream);display:flex;flex-direction:row;align-items:center;gap:4vw">
+<div class="slide s-quote" data-slide="11" style="background:var(--wissen-cream);display:flex;flex-direction:row;align-items:center;gap:4vw">
   <img src="bilder/gabriele winkler care revolution .jpg" style="height:70vh;border:3px solid var(--tinten-schwarz);box-shadow:6px 6px 0 rgba(18,10,31,.2);flex-shrink:0;z-index:1" alt="Care Revolution — Gabriele Winker">
   <div style="z-index:1;display:flex;flex-direction:column;justify-content:center">
     <div class="q" style="padding-left:0;font-size:4vh">„Notwendig ist ein grundlegender Perspektivenwechsel — nicht weniger als eine Care Revolution. Nicht Profitmaximierung, sondern menschliche Bedürfnisse und die Sorge umeinander ins Zentrum."</div>
     <div class="cite" style="position:static;margin-top:3vh">— Gabriele Winker · Care Revolution · transcript Verlag, 2015</div>
   </div>
-  <span class="slide-num" style="color:var(--tinten-schwarz)">14 / 27</span>
+  <span class="slide-num" style="color:var(--tinten-schwarz)">12 / 25</span>
 </div>
 <!-- Slide 15: DEFINITION — Forderungen 2019 -->
-<div class="slide s-definition" data-slide="15">
+<div class="slide s-definition" data-slide="12">
   <div class="def-title">Forderungen <em>2019.</em></div>
   <div class="def-text" style="font-size:3vh;max-width:85%">
     <strong style="font-family:var(--display);font-style:normal">Lohngleichheit</strong> · Mindestlohn · Elternzeit · Anerkennung unbezahlter Arbeit · Stopp Gewalt an FLINTA* · Selbstbestimmung über den eigenen Körper · Aufenthaltsbewilligung unabhängig vom Ehepartner · AHV-Renten sichern · Keine Erhöhung des Rentenalters
   </div>
   <div class="def-sub" style="max-width:85%">Viele Forderungen bis heute nicht umgesetzt. Die Bewegung geht weiter — breiter, intersektionaler, antikapitalistischer.</div>
   <p class="footnote footnote-bottom">Quelle: Frauenstreik 2019 · feministischerstreikzuerich.ch</p>
-  <span class="slide-num">15 / 27</span>
+  <span class="slide-num">13 / 25</span>
 </div>
 <!-- Slide 16: CTA — Forderungen Care-Streik 2027 -->
-<div class="slide s-cta" data-slide="16">
+<div class="slide s-cta" data-slide="13">
   <div style="font-family:var(--mono);font-size:1.4vh;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1vh">Forderungen</div>
   <div class="cta-title">Deine<br>Forderung<br>zählt.</div>
   <div class="cta-sub">forderungen.ch</div>
@@ -966,10 +917,10 @@ html, body {
   <div class="sticker-deco" style="right:6vw;top:50%;transform:translateY(-50%)">
     <img src="bilder/forderungen.ch.png" style="width:24vh;border:3px solid var(--tinten-schwarz)" alt="QR forderungen.ch">
   </div>
-  <span class="slide-num" style="color:var(--tinten-schwarz)">16 / 27</span>
+  <span class="slide-num" style="color:var(--tinten-schwarz)">14 / 25</span>
 </div>
 <!-- Slide 17: CTA-WORKSHOP — Kleingruppendiskussion 1 -->
-<div class="slide s-cta-workshop" data-slide="17">
+<div class="slide s-cta-workshop" data-slide="14">
   <div class="workshop-title">Diskussion 1:<br><em>Eigene Erfahrungen.</em></div>
   <div class="workshop-instructions">
     <p style="margin-bottom:2vh">Name, Pronomen — und je ein Bereich, in dem ihr Care-Arbeit leistet und wo ihr von Care-Arbeit abhängig seid.</p>
@@ -982,10 +933,10 @@ html, body {
   <div class="sticker-deco" style="top:6vh;right:5vw;transform:rotate(6deg)">
     <svg width="14vh" height="14vh" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#FFD93D" stroke="#120A1F" stroke-width="2.5"/><text x="50" y="44" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="11" fill="#120A1F">EURE</text><text x="50" y="62" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="11" fill="#120A1F">STIMME</text></svg>
   </div>
-  <span class="slide-num">17 / 27</span>
+  <span class="slide-num">15 / 25</span>
 </div>
 <!-- Slide 18: DEFINITION — Streik-Definition -->
-<div class="slide s-definition" data-slide="18">
+<div class="slide s-definition" data-slide="15">
   <div class="def-title">Rechtmässiger Streik: <em>bezahlte Arbeit.</em></div>
   <div class="def-text" style="font-size:3.2vh;max-width:60vw">
     <strong style="color:var(--hot-pink)">4 Voraussetzungen:</strong><br>
@@ -997,10 +948,10 @@ html, body {
   <div class="def-sub" style="max-width:60vw">Voraussetzung: ein <strong>Minimalbetrieb</strong> muss weiterlaufen — keine Leben dürfen gefährdet sein.<br><br>
   <span style="color:var(--streik-lila)">Vorschlag FSK: Cis-Männer leisten den Minimalbetrieb an Orten, wo Care-Arbeit unbezahlt geleistet wird.</span></div>
   <img src="grafiken/care2027_item_hassi.png" style="position:absolute;top:6vh;right:6vw;width:33vh;transform:rotate(4deg);pointer-events:none;z-index:4" alt="">
-  <span class="slide-num">18 / 27</span>
+  <span class="slide-num">16 / 25</span>
 </div>
 <!-- Slide 19: ZITAT — Federici -->
-<div class="slide s-quote" data-slide="19">
+<div class="slide s-quote" data-slide="16">
   <div class="q-mark">&#8222;</div>
   <div class="q">„They say it is love. We say it is unwaged work. They call it frigidity. We call it absenteeism. Every miscarriage is a work accident."</div>
   <div class="q" style="font-size:3.5vh;margin-top:2vh;opacity:.75">„Sie nennen es Liebe. Wir nennen es unbezahlte Arbeit. Sie nennen es Frigidität. Wir nennen es Arbeitsverweigerung. Jede Fehlgeburt ist ein Arbeitsunfall."</div>
@@ -1008,10 +959,10 @@ html, body {
   <div class="stamp">
     <svg width="10vh" height="6vh" viewBox="0 0 100 60"><rect x="4" y="4" width="92" height="52" rx="6" fill="none" stroke="#6B2FB5" stroke-width="3"/><text x="50" y="38" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="18" fill="#6B2FB5">O-TON</text></svg>
   </div>
-  <span class="slide-num">19 / 27</span>
+  <span class="slide-num">17 / 25</span>
 </div>
 <!-- Slide 20: ZITAT — Schutzbach -->
-<div class="slide s-quote" data-slide="20" style="background:var(--wissen-cream)">
+<div class="slide s-quote" data-slide="17" style="background:var(--wissen-cream)">
   <div class="q-mark">&#8222;</div>
   <div style="position:absolute;top:3vh;left:4vw;font-family:var(--mono);font-size:2vh;letter-spacing:.1em;text-transform:uppercase;color:var(--haessig-orange)">Unbezahlte Arbeit · Fokus 2026</div>
   <div class="q">Der feministische Streik ist mehr als der Kampf um gleiche Löhne. Der feministische Streik ist ein politischer Streik — er richtet sich gegen das System, nicht nur gegen einzelne Arbeitgeber. In diesem Sinn ist der feministische Streik ziviler Ungehorsam.</div>
@@ -1020,10 +971,10 @@ html, body {
     <svg width="10vh" height="6vh" viewBox="0 0 100 60"><rect x="4" y="4" width="92" height="52" rx="6" fill="none" stroke="#FF3D7F" stroke-width="3"/><text x="50" y="38" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="18" fill="#FF3D7F">O-TON</text></svg>
   </div>
   <img src="bilder/care zentrierte gesellschaft.png" style="position:absolute;bottom:6vh;right:5vw;width:35vh;pointer-events:none;z-index:4;opacity:.8" alt="">
-  <span class="slide-num">20 / 27</span>
+  <span class="slide-num">18 / 25</span>
 </div>
 <!-- Slide 21: AUFRUF — Wir haben keinen Bock mehr -->
-<div class="slide s-stat" data-slide="21" style="background:var(--tinten-schwarz);color:var(--wissen-cream);overflow:hidden">
+<div class="slide s-stat" data-slide="18" style="background:var(--tinten-schwarz);color:var(--wissen-cream);overflow:hidden">
   <div style="position:absolute;top:3vh;left:4vw;right:4vw;bottom:3vh;display:flex;flex-direction:row;gap:4vw;align-items:center">
     <div style="flex:1.2;z-index:2">
       <div style="font-family:var(--display);font-size:5vh;color:var(--hot-pink);line-height:1.1;margin-bottom:2vh">Wir haben keinen Bock mehr.</div>
@@ -1037,10 +988,10 @@ html, body {
       <div style="font-family:var(--display);font-size:3.2vh;color:var(--kollektiv-gelb);text-align:center;line-height:1.2;transform:rotate(2deg)">Wenn FLINTA<br>nicht mehr will,<br>steht alles still!</div>
     </div>
   </div>
-  <span class="slide-num" style="color:var(--wissen-cream)">21 / 27</span>
+  <span class="slide-num" style="color:var(--wissen-cream)">19 / 25</span>
 </div>
 <!-- Slide 22: ARGUMENT — Gesamtgesellschaftlicher Wandel (step-through) -->
-<div class="slide s-three" data-slide="22" style="background:var(--wissen-cream)">
+<div class="slide s-three" data-slide="19" style="background:var(--wissen-cream)">
   <div class="head">Feministischer Streik = <em>gesamtgesellschaftlicher Wandel.</em></div>
   <div style="position:absolute;top:2vh;right:4vw;font-family:var(--mono);font-size:2vh;letter-spacing:.08em;color:var(--streik-lila)">Antikapitalistisch · Feministisch</div>
   <div class="demand-list" style="position:absolute;top:16vh;left:5vw;right:5vw;bottom:10vh;display:flex;flex-direction:column;justify-content:center;gap:2.5vh">
@@ -1071,10 +1022,10 @@ html, body {
     <div class="step-dot" data-step="4" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
     <div class="step-dot" data-step="5" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
   </div>
-  <span class="slide-num">22 / 27</span>
+  <span class="slide-num">20 / 25</span>
 </div>
 <!-- Slide 23: ARGUMENT — 4 Ansätze zum Care-Streik 2027 (stars) -->
-<div class="slide s-three" data-slide="23">
+<div class="slide s-three" data-slide="20">
   <div class="head">Vier Ansätze zum <em>Care-Streik.</em></div>
   <div class="star-field">
     <div class="star-card star-step" data-step="0" style="left:50%;top:50%;width:70vh;height:70vh;transform:translate(-50%,-50%) scale(0);opacity:0">
@@ -1117,10 +1068,10 @@ html, body {
     <div class="step-dot" data-step="3" style="width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--tinten-schwarz);background:transparent"></div>
   </div>
   <p class="footnote footnote-bottom">Quelle: Workshop Care-Streik 2027 · Feministisches Streikkollektiv Zürich</p>
-  <span class="slide-num">23 / 27</span>
+  <span class="slide-num">21 / 25</span>
 </div>
 <!-- Slide 24: HOW TO — Organisierung -->
-<div class="slide s-stat" data-slide="24" style="background:var(--wissen-cream)">
+<div class="slide s-stat" data-slide="21" style="background:var(--wissen-cream)">
   <div style="position:absolute;top:4vh;left:5vw;font-family:var(--display);font-size:5vh;color:var(--streik-lila);line-height:1.1">How to: <em>Organisierung.</em></div>
   <div style="position:absolute;top:18vh;left:5vw;right:5vw;bottom:10vh;display:flex;flex-direction:column;justify-content:center;gap:3.5vh">
     <div style="font-family:var(--display);font-size:4vh;color:var(--hot-pink);display:flex;align-items:center;gap:2vw">
@@ -1136,10 +1087,10 @@ html, body {
       <span style="font-size:5vh;line-height:1">&#9733;</span> Netzwerke aufbauen — lokal & überregional
     </div>
   </div>
-  <span class="slide-num">24 / 27</span>
+  <span class="slide-num">22 / 25</span>
 </div>
 <!-- Slide 24: CTA-WORKSHOP — Kleingruppendiskussion 2 -->
-<div class="slide s-cta-workshop" data-slide="25">
+<div class="slide s-cta-workshop" data-slide="22">
   <div class="workshop-title">Diskussion 2:<br><em>Sichtbarmachung.</em></div>
   <div class="workshop-instructions" style="max-width:55vw">
     <p style="font-family:var(--display);font-size:3.5vh;color:var(--hot-pink)">Wie machen wir unbezahlte Care-Arbeit sichtbar?</p>
@@ -1153,25 +1104,25 @@ html, body {
     <img src="bilder/forderungen.ch.png" style="width:22vh;border:3px solid var(--tinten-schwarz)" alt="QR forderungen.ch">
     <span class="qr-label">forderungen.ch</span>
   </div>
-  <span class="slide-num">25 / 27</span>
+  <span class="slide-num">23 / 25</span>
 </div>
 <!-- Slide 25: ZITAT — Schluss -->
-<div class="slide s-quote" data-slide="26">
+<div class="slide s-quote" data-slide="23">
   <div class="q-mark">&#8222;</div>
   <div class="q">Ändern wir nicht die Frauen*, ändern wir die Verhältnisse.</div>
   <div class="cite">— Feministisches Streikkollektiv Zürich · Care-Streik 2027</div>
   <div class="stamp">
     <svg width="12vh" height="12vh" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#FFD93D" stroke="#120A1F" stroke-width="2.5"/><text x="50" y="44" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="13" fill="#120A1F">CARE</text><text x="50" y="62" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="13" fill="#120A1F">STREIK</text><text x="50" y="78" text-anchor="middle" font-family="Archivo Black,sans-serif" font-size="11" fill="#6B2FB5">2027</text></svg>
   </div>
-  <span class="slide-num">26 / 27</span>
+  <span class="slide-num">24 / 25</span>
 </div>
-<!-- Slide 26: TITEL — Kontakt & Mitmachen -->
-<div class="slide s-title" data-slide="27">
+<!-- Slide 25: TITEL — Kontakt & Mitmachen -->
+<div class="slide s-title" data-slide="24">
   <div class="kicker">Care-Streik 2027 · Feministisches Streikkollektiv Zürich</div>
   <div class="big">Care ist<br><em>Arbeit.</em></div>
   <div class="foot">
     <span>feministischerstreikzuerich.ch</span>
-    <span>28 / 27</span>
+    <span>25 / 25</span>
   </div>
   <img src="grafiken/care2027_item_schleifi6.png" style="position:absolute;top:4vh;right:8vw;width:52vh;transform:rotate(-10deg);pointer-events:none;z-index:4" alt="">
   <img src="grafiken/Sterne_-03.png" style="position:absolute;bottom:14vh;right:5vw;width:50vh;pointer-events:none;z-index:4" alt="">
@@ -1266,7 +1217,7 @@ html, body {
 })();
 /* Slide 01 — Title clip reveal + sticker pop */
 (function () {
-  const el = document.querySelector('[data-slide="1"]');
+  const el = document.querySelector('[data-slide="0"]');
   const idx = deckEngine.getSlideIndex(el);
 
   deckEngine.register(idx, {
@@ -1281,18 +1232,20 @@ html, body {
 })();
 /* Slide 02 — Multi-phase step-through:
    Phase 1: Logos accumulate in random order (9 clicks)
-   Phase 2: Streikhaus + FSKZ logo (1 click)
-   Phase 3: Stars one-at-a-time (3 clicks)
-   Phase 4: 1991 images one-at-a-time (2 clicks)
-   Phase 5: 2019 images one-at-a-time (4 clicks) */
+   Phase 2: Streikhaus illustration + FSKZ logo (1 click)
+   Phase 3: Streikhaus photo (1 click)
+   Phase 4: Stars one-at-a-time (3 clicks)
+   Phase 5: 1991 images one-at-a-time (2 clicks)
+   Phase 6: 2019 images one-at-a-time (4 clicks) */
 (function () {
-  var el = document.querySelector('[data-slide="2"]');
+  var el = document.querySelector('[data-slide="1"]');
   if (!el) return;
   var idx = deckEngine.getSlideIndex(el);
 
   var logos = el.querySelectorAll('.logo-item');
   var logoField = el.querySelector('.logo-field');
   var streikhausEl = el.querySelector('.streikhaus-phase');
+  var streikhausPhotoEl = el.querySelector('.streikhaus-photo-phase');
   var phase1991 = el.querySelector('.phase-1991');
   var phase2019 = el.querySelector('.phase-2019');
   var imgs1991 = el.querySelectorAll('.img-1991');
@@ -1302,7 +1255,8 @@ html, body {
 
   var totalLogos = logos.length;
   var streikhausStep = totalLogos;
-  var starStart = streikhausStep + 1;
+  var streikhausPhotoStep = streikhausStep + 1;
+  var starStart = streikhausPhotoStep + 1;
   var totalStars = stars.length;
   var img1991Start = starStart + totalStars;
   var totalImgs1991 = imgs1991.length;
@@ -1312,7 +1266,6 @@ html, body {
 
   var step = -1;
 
-  /* Shuffle logo appearance order */
   var logoOrder = [];
   for (var i = 0; i < totalLogos; i++) logoOrder.push(i);
   function shuffle(arr) {
@@ -1327,6 +1280,7 @@ html, body {
     gsap.set(logoField, { opacity: 1 });
     logos.forEach(function (l) { gsap.set(l, { opacity: 0, scale: .5 }); });
     gsap.set(streikhausEl, { opacity: 0, pointerEvents: 'none' });
+    gsap.set(streikhausPhotoEl, { opacity: 0, pointerEvents: 'none' });
     gsap.set(phase1991, { opacity: 0, pointerEvents: 'none' });
     gsap.set(phase2019, { opacity: 0, pointerEvents: 'none' });
     imgs1991.forEach(function (im) { gsap.set(im, { opacity: 0 }); });
@@ -1338,6 +1292,7 @@ html, body {
   function hideOtherPhases(keep) {
     if (keep !== 'logos') gsap.to(logoField, { opacity: 0, duration: .2 });
     if (keep !== 'streikhaus') gsap.set(streikhausEl, { opacity: 0, pointerEvents: 'none' });
+    if (keep !== 'streikhaus-photo') gsap.set(streikhausPhotoEl, { opacity: 0, pointerEvents: 'none' });
     if (keep !== '1991') { gsap.set(phase1991, { opacity: 0, pointerEvents: 'none' }); imgs1991.forEach(function (im) { gsap.set(im, { opacity: 0 }); }); }
     if (keep !== '2019') { gsap.set(phase2019, { opacity: 0, pointerEvents: 'none' }); imgs2019.forEach(function (im) { gsap.set(im, { opacity: 0 }); }); }
     if (keep !== 'stars') {
@@ -1364,6 +1319,12 @@ html, body {
     hideOtherPhases('streikhaus');
     gsap.set(streikhausEl, { pointerEvents: 'auto' });
     gsap.fromTo(streikhausEl, { opacity: 0, scale: .9 }, { opacity: 1, scale: 1, duration: .6, ease: 'back.out(1.5)' });
+  }
+
+  function showStreikhausPhoto() {
+    hideOtherPhases('streikhaus-photo');
+    gsap.set(streikhausPhotoEl, { pointerEvents: 'auto' });
+    gsap.fromTo(streikhausPhotoEl, { opacity: 0 }, { opacity: 1, duration: .5, ease: 'power2.out' });
   }
 
   function showStar(n) {
@@ -1400,6 +1361,8 @@ html, body {
       showLogos(s);
     } else if (s === streikhausStep) {
       showStreikhaus();
+    } else if (s === streikhausPhotoStep) {
+      showStreikhausPhoto();
     } else if (s >= starStart && s < img1991Start) {
       showStar(s - starStart);
     } else if (s >= img1991Start && s < img2019Start) {
@@ -1464,7 +1427,7 @@ html, body {
   const entranceRotations = [-35, 25, -45, 30, -20, 40, -30, 35, -25, 45, -40, 20];
 
   /* Slides with star-field layout */
-  const argSlideNums = [10, 13, 14, 24];
+  const argSlideNums = [7, 10, 11, 21];
   let patternIdx = 0;
 
   argSlideNums.forEach(n => {
@@ -1531,8 +1494,8 @@ html, body {
 })();
 /* Stat slides — entrance animations */
 (function () {
-  /* All s-stat slides: 4, 5, 6, 10 */
-  [5, 6, 7, 11].forEach(n => {
+  /* All s-stat slides: 4, 5, 9 */
+  [3, 4, 8].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1553,83 +1516,9 @@ html, body {
     });
   });
 })();
-/* Slide 06 — Step-through stars (one at a time) */
+/* Big statement text reveal — slide 19 */
 (function () {
-  const el = document.querySelector('[data-slide="6"]');
-  if (!el) return;
-  const idx = deckEngine.getSlideIndex(el);
-  const stars = el.querySelectorAll('.star-step');
-  const dots = el.querySelectorAll('.step-dot');
-  const floatTags = el.querySelectorAll('.float-tag');
-  let step = -1;
-  const total = stars.length;
-
-  function showStep(n) {
-    stars.forEach((s, i) => {
-      if (i === n) {
-        gsap.to(s, { opacity: 1, scale: 1, rotation: gsap.utils.random(-8, 8), duration: .6, ease: 'back.out(2)' });
-      } else if (i < n) {
-        /* shrink previous to corner */
-        const xOff = -35 + i * 18;
-        gsap.to(s, { opacity: .35, scale: .25, x: xOff + 'vw', y: '20vh', rotation: gsap.utils.random(-15, 15), duration: .5, ease: 'power2.inOut' });
-      } else {
-        gsap.set(s, { opacity: 0, scale: 0 });
-      }
-    });
-    dots.forEach((d, i) => {
-      d.style.background = i <= n ? 'var(--tinten-schwarz)' : 'transparent';
-    });
-    /* Animate float-tags for their matching step */
-    floatTags.forEach(tag => {
-      const tagStep = parseInt(tag.dataset.step, 10);
-      if (tagStep === n) {
-        gsap.to(tag, { opacity: 1, duration: .5, delay: .3 + Math.random() * .3, ease: 'power2.out' });
-      } else {
-        gsap.to(tag, { opacity: 0, duration: .3, ease: 'power2.in' });
-      }
-    });
-  }
-
-  deckEngine.register(idx, {
-    enter(dir) {
-      stars.forEach(s => gsap.set(s, { opacity: 0, scale: 0, x: 0, y: 0 }));
-      dots.forEach(d => { d.style.background = 'transparent'; });
-      floatTags.forEach(tag => gsap.set(tag, { opacity: 0 }));
-      const head = el.querySelector('.head');
-      if (head) gsap.fromTo(head, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: .6, ease: 'power3.out' });
-      if (dir === 'back') {
-        step = total - 1;
-        showStep(step);
-      } else {
-        step = -1;
-      }
-    },
-    advance() {
-      if (step < total - 1) {
-        step++;
-        showStep(step);
-        return true; /* consumed */
-      }
-      return false; /* let engine go to next slide */
-    },
-    goBack() {
-      if (step > 0) {
-        step--;
-        showStep(step);
-        return true;
-      }
-      return false;
-    },
-    leave() {
-      step = -1;
-      stars.forEach(s => gsap.set(s, { opacity: 0, scale: 0, x: 0, y: 0 }));
-      floatTags.forEach(tag => gsap.set(tag, { opacity: 0 }));
-    }
-  });
-})();
-/* Big statement text reveal — slide 21 */
-(function () {
-  [21].forEach(n => {
+  [18].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1643,9 +1532,9 @@ html, body {
     });
   });
 })();
-/* CTA entrance — slides 7, 15 */
+/* CTA entrance — slides 5, 13 */
 (function () {
-  [8, 16].forEach(n => {
+  [5, 13].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1665,9 +1554,9 @@ html, body {
     });
   });
 })();
-/* Definition entrance — slides 8, 14, 17 */
+/* Definition entrance — slides 6, 12, 15 */
 (function () {
-  [9, 15, 18].forEach(n => {
+  [6, 12, 15].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1687,9 +1576,9 @@ html, body {
     });
   });
 })();
-/* Column-based argument slides — 20 (CH vs DE comparison) */
+/* Column-based argument slides — 18 (CH vs DE comparison) */
 (function () {
-  [21].forEach(n => {
+  [18].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1709,9 +1598,9 @@ html, body {
     });
   });
 })();
-/* Workshop/discussion slides — 16, 24 */
+/* Workshop/discussion slides — 14, 22 */
 (function () {
-  [17, 25].forEach(n => {
+  [14, 22].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1729,9 +1618,9 @@ html, body {
     });
   });
 })();
-/* Quote entrance — slides 18, 19, 25 */
+/* Quote entrance — slides 16, 17, 23 */
 (function () {
-  [19, 20, 25].forEach(n => {
+  [16, 17, 23].forEach(n => {
     const el = document.querySelector(`[data-slide="${n}"]`);
     if (!el) return;
     const idx = deckEngine.getSlideIndex(el);
@@ -1746,11 +1635,9 @@ html, body {
     });
   });
 })();
-/* Slide 21 — formerly Gegen/Für, now handled by slide-22-steps.js */
-/* This file intentionally left minimal — slide 22 step-through has its own handler */
-/* Slide 22 — Step-through demands (one at a time, accumulating) */
+/* Slide 20 — Step-through demands (one at a time, accumulating) */
 (function () {
-  const el = document.querySelector('[data-slide="22"]');
+  const el = document.querySelector('[data-slide="19"]');
   if (!el) return;
   const idx = deckEngine.getSlideIndex(el);
   const items = el.querySelectorAll('.demand-step');
@@ -1813,9 +1700,11 @@ html, body {
     }
   });
 })();
-/* Slide 23 — 4 Ansätze stars step-through (one at a time, big) */
+/* Slide 19 — formerly Gegen/Für, now handled by slide-20-steps.js */
+/* This file intentionally left minimal — slide 20 step-through has its own handler */
+/* Slide 21 — 4 Ansätze stars step-through (one at a time, big) */
 (function () {
-  var el = document.querySelector('[data-slide="23"]');
+  var el = document.querySelector('[data-slide="20"]');
   if (!el) return;
   var idx = deckEngine.getSlideIndex(el);
   var stars = el.querySelectorAll('.star-step');
@@ -1878,9 +1767,9 @@ html, body {
     }
   });
 })();
-/* Slide 27 — Closing title */
+/* Slide 25 — Closing title */
 (function () {
-  const el = document.querySelector('[data-slide="27"]');
+  const el = document.querySelector('[data-slide="24"]');
   if (!el) return;
   const idx = deckEngine.getSlideIndex(el);
   deckEngine.register(idx, {
